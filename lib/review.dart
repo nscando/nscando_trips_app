@@ -6,27 +6,51 @@ class Review extends StatelessWidget {
   String details = "1 review - 5 photos";
   String comment = "There is an amazing place in Argentina";
 
-
-  Review(this.pathImage, this.name);
+  Review(this.pathImage, this.name, this.comment, this.details);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
     final userName = Container(
-      margin: EdgeInsets.only(
-        left: 20.0
+      margin: const EdgeInsets.only(left: 20.0),
+      child: Text(
+        name,
+        textAlign: TextAlign.left,
+        style: const TextStyle(fontSize: 17.0, fontFamily: "Lato"),
       ),
-      child: Text(name),
+    );
+
+    final userComment = Container(
+      margin: const EdgeInsets.only(left: 20.0),
+      child: Text(
+        comment,
+        textAlign: TextAlign.left,
+        style: const TextStyle(
+            fontSize: 12.0,
+            fontWeight: FontWeight.w900,
+            fontFamily: "Lato",
+            color: Color(0xFFa3a5a7)),
+      ),
+    );
+
+    final userInfo = Container(
+      margin: const EdgeInsets.only(left: 20.0),
+      child: Text(
+        details,
+        textAlign: TextAlign.left,
+        style: const TextStyle(
+          fontSize: 13.0,
+          fontWeight: FontWeight.w900,
+          fontFamily: "Lato",
+        ),
+      ),
     );
 
     final userDetails = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-
-      ],
+      children: <Widget>[userName, userComment, userInfo],
     );
-
 
     final photo = Container(
       margin: EdgeInsets.only(top: 20.0, left: 20.0),
@@ -35,14 +59,11 @@ class Review extends StatelessWidget {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           image:
-              DecorationImage(fit: BoxFit.fill, image: AssetImage(pathImage))),
+              DecorationImage(fit: BoxFit.cover, image: AssetImage(pathImage))),
     );
 
-
     return Row(
-      children: <Widget>[
-        photo
-      ],
+      children: <Widget>[photo, userDetails],
     );
   }
 }

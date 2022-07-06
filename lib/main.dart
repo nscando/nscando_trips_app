@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nscando_trips_app/description_place.dart';
+import 'package:nscando_trips_app/review_list.dart';
+import 'package:nscando_trips_app/gradient_back.dart';
 
 void main() {
   runApp(const MyApp());
 }
-String descriptionDummy = "Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt, risus at dictum hendrerit facilisis fringilla molestie elementum mollis, non. \nrisus at dictum hendrerit facilisis fringilla molestie elementum mollis, non.";
+
+String descriptionDummy =
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt, risus at dictum hendrerit facilisis fringilla molestie elementum mollis, non. \nrisus at dictum hendrerit facilisis fringilla molestie elementum mollis, non.";
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -28,10 +32,17 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Hola nico prueba'),
+          body: Stack(
+            children: [
+              ListView(
+                children: [
+                  DescriptionPlace("Bariloche", 4, descriptionDummy),
+                  ReviewList()
+                ],
+              ),
+              GradientBack(),
+            ],
           ),
-          body: new DescriptionPlace("Bariloche", 4, descriptionDummy),
         ) //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
