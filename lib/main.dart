@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nscando_trips_app/description_place.dart';
 import 'package:nscando_trips_app/review_list.dart';
 import 'package:nscando_trips_app/gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,8 @@ void main() {
 
 String descriptionDummy =
     "Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt, risus at dictum hendrerit facilisis fringilla molestie elementum mollis, non. \nrisus at dictum hendrerit facilisis fringilla molestie elementum mollis, non.";
+
+String title = "Most Popular";
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
                   ReviewList()
                 ],
               ),
-              GradientBack(),
+              HeaderAppbar(),
             ],
           ),
         ) //const MyHomePage(title: 'Flutter Demo Home Page'),

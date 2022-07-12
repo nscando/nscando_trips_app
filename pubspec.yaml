@@ -89,6 +89,11 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/img/rick.png
+    - assets/img/bari1.jpeg
+    - assets/img/bari2.jpeg
+    - assets/img/bari3.jpeg
+    - assets/img/bari4.jpeg
+    - assets/img/bari5.jpeg
 
   fonts:
     - family: Lato
