@@ -94,6 +94,14 @@ flutter:
     - assets/img/bari3.jpeg
     - assets/img/bari4.jpeg
     - assets/img/bari5.jpeg
+    - assets/img/ann.jpeg
+    - assets/img/beach.jpeg
+    - assets/img/beach_palm.jpeg
+    - assets/img/girl.jpeg
+    - assets/img/mountain.jpeg
+    - assets/img/mountain_stars.jpeg
+    - assets/img/river.jpeg
+    - assets/img/sunset.jpeg
 
   fonts:
     - family: Lato
